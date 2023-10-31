@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+.App {
+  color: black;
+  font-family: Poppins;
+  background-color: rgb(1 22 73);
+  justify-content: center;
+  text-align: center; 
+}
