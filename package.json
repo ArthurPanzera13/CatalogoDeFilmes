@@ -1,7 +1,7 @@
 {
   "name": "catalogofilmes",
   "version": "0.1.0",
-  "homepage": "https://arthurpanzera13.github.io/CatalogoDeFilmes/",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -44,6 +44,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.0.0"
+    "gh-pages": "^6.1.0"
   }
 }
