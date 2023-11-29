@@ -3,8 +3,18 @@ import { StyledDivDetails, StyledDivInfos} from '../style'
 
 import { BsFillCalendarDateFill } from 'react-icons/bs';
 import { BiTime, BiMoney } from 'react-icons/bi';
+import { useEffect, useState } from 'react';
+
+import YouTube from 'react-youtube';
+
+//Axios
+import axios from 'axios';
+
+
 
 const FilmDetails = ({filme}) => {
+
+  const [filmesVideo, setfilmesVideo] = useState([]);
 
   const formataDinheiro = (number) => {
     return number.toLocaleString("en-US", {
@@ -17,10 +27,25 @@ const FilmDetails = ({filme}) => {
     return data.split('-').reverse().join('/')
   }
 
+  useEffect(() => {
+
+    axios
+      .get(`https://api.themoviedb.org/3/movie/${filme.id}/videos?api_key=fc0d1e86d240df4a0d3424c1e33e3479&language=en-US`)
+      .then((res) => {
+        const filmesVideo = res.data.results;
+        setfilmesVideo(filmesVideo)
+        console.log(filmesVideo)
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+
+  }, []);
+
   return (
     <StyledDivDetails>
         <h1>{filme.title}</h1>
-        <img src={`http://image.tmdb.org/t/p/w500${filme.poster_path}`} alt={filme.poster_path} />
+        <YouTube videoId={`${filmesVideo[9].key}`}/>
         <StyledDivInfos>
           <BsFillCalendarDateFill/><h3>Data de Lançamento: {formataData(filme.release_date)}</h3>
         </StyledDivInfos>
