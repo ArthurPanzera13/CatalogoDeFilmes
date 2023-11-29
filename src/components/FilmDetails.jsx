@@ -28,10 +28,10 @@ const FilmDetails = ({filme}) => {
           <BiTime/><h3>Duração do Filme: {filme.runtime} minutos</h3>
         </StyledDivInfos>
         <StyledDivInfos>
-        <BiMoney/><h3>Receita: {formataDinheiro(filme.revenue)}</h3>
+          <BiMoney/><h3>Receita: {formataDinheiro(filme.revenue)}</h3>
         </StyledDivInfos>
         <StyledDivInfos>
-        <BiMoney/><h3>Orçamento: {formataDinheiro(filme.budget)}</h3>
+          <BiMoney/><h3>Orçamento: {formataDinheiro(filme.budget)}</h3>
         </StyledDivInfos>
         <StyledDivInfos>
           <h2>Descrição: {filme.overview}</h2>

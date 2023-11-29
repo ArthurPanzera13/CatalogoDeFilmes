@@ -6,8 +6,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import CardFilm from '../components/CardFilm'
 import NavBar from '../components/NavBar'
-import { BiSearch } from 'react-icons/bi';
-import { StyledBusca, StyledButton, StyledButtonNext} from '../style'
+import { StyledButtonNext} from '../style'
 import Loading from './Loading';
 import Rodape from '../components/Rodape'
 
@@ -49,7 +48,6 @@ const Home = () => {
     <div>
       <NavBar/>
       <div>
-        <StyledBusca type="text" name="" id="" placeholder='Busque o nome do Filme...'/><StyledButton><BiSearch/></StyledButton>
         {loading ? <Loading /> : (
         <>
           <CardFilm filme={filmes} />

@@ -1,45 +1,41 @@
 import styled from 'styled-components'
 
-
-
 export const StyledDivCard = styled.div`
 
     background-color: white;
     width: 85%;
-    height: 70vh;
     padding: 2%;
     border-radius: 8px;
     display: flex;
+    height: 35vh;
+    transition: background-color 0.8s ease; /* Transição mais lenta (0.5s) */
+    gap: 5px;
+    justify-content: flex-end;
+
+    &:hover{
+        background-color: #DCDCDC;
+    }
 `
 
 export const StyledDivContainer = styled.div`
 
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-    flex-wrap: wrap;
-
-
     display: flex;
     flex-direction: column;
-    width: 100%;
     margin-top: 1%;
-    gap: 40px;
     justify-content: center;
-    align-items: center;
     button:hover{
         transform: scale(1.01); /* Increase the size on hover */
     }
 
     img{
-        height: 70vh;
+        height: 35vh;
         border-radius: 8px;
         margin-right: 60%;
     }
 
 
     @media (max-width: 768px) {
-        /* CSS code for screens with a maximum width of 768px */
-        /* Adjust the styles for smaller screens here */
-        /* For example, you can change the width of the images and buttons */
         width: 80%;
         margin-left: 10%;
         margin-top: 5%;
@@ -52,7 +48,6 @@ export const StyledDivContainer = styled.div`
             width: 50%;
         }
     }
-
     
 `
 
@@ -66,11 +61,24 @@ export const StyledNavBar = styled.div`
     h1{
         margin-left: 7%;
     }
+
+    a{
+        margin-left: 5%;
+    }
 `
 
 export const StyledDivInfosCard = styled.div`
-    margin-left: 2%;
-    margin: 5%;
+    margin-right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+`
+
+export const StyledImageFilm = styled.div`
+    margin-right: 8%;
+    
     
 `
 
@@ -82,18 +90,28 @@ export const StyledDivNota = styled.div`
     
 `
 
+export const StyledTeste = styled.div`
+    margin-left: 2%;
+    margin: 5%;
+    padding: 5px;
+    gap: 5%;
+    
+`
+
 export const StyledBusca = styled.input`
 
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
-    height: 40px;
-    width: 83%;
+    height: 30px;
+    width: 800px;
     border-radius: 4px;
-    border: solid 2px black;
+    border: solid 2px;
+    opacity: 0.5;
     margin-top: 1%;
     font-family: poppins;
     font-weight: bold;
-
+    margin-right: 25%;
+    
     @media (max-width: 768px) {
         width: 65%;
         margin-top: 5%;
@@ -120,11 +138,14 @@ export const StyledButton = styled.button`
 export const StyledButtonDetalhes = styled.button`
 
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-    background-color: white;
+    width: 100%;
+    height: 20%;
     border-radius: 8px;
     font-family: poppins;
     background-color: rgb(1 22 73);
     color: white;
+    display: flex;
+    margin-top: 10%;
 
 
     @media (max-width: 768px) {
@@ -196,3 +217,14 @@ export const StyledButtonNext = styled.button`
 export const StyledRodape = styled.div`
     margin-top: 2%;
 `
+export const StyledDivButtonDetails = styled.div`
+    display: flex;
+    align-items: flex-end;
+    margin-left: auto;
+`;
+
+export const StyledContainerNav = styled.div`
+    display: flex;
+    align-items: flex-end;
+    margin:0 auto;
+`;
