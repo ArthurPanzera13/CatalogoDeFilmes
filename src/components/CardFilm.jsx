@@ -18,7 +18,7 @@ const CardFilm = ({ filme }) => {
                 <p>{filme.overview}</p>
               </StyledTeste>
               <StyledDivNota>
-                <strong>Nota: {filme.vote_average}<IoIosStar style={{
+                <strong>Average {filme.vote_average}<IoIosStar style={{
                   color: '#ffbf00'
                 }} /></strong>
               </StyledDivNota>
