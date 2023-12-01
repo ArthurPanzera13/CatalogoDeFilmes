@@ -1,59 +1,41 @@
 import styled from 'styled-components'
 
-
-
 export const StyledDivCard = styled.div`
+
     background-color: white;
-    color: black;
-    border-radius: 5px;
-    padding: 10px;
-    height: 700px;
-    border: solid 2px black;
-    text-align: cecnter;
-    margin-top: 1%;
+    width: 85%;
+    padding: 2%;
+    border-radius: 8px;
+    display: flex;
+    height: 35vh;
+    transition: background-color 0.8s ease; /* Transição mais lenta (0.5s) */
+    gap: 5px;
+    justify-content: flex-end;
+
+    &:hover{
+        background-color: #DCDCDC;
+    }
 `
 
 export const StyledDivContainer = styled.div`
 
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-
-    justify-content: center;
-    text-align: center;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 20px; /* Espaço entre as imagens */
-    transition: transform 0.7s ease; /* Transição mais lenta */
-
-    div:hover {
-        transform: scale(1.01); /* Aumenta o tamanho no hover */
-    }
-
-
-    img{
-        width: 70%;
-    }
-
-    button{
-        width: 30%;
-        height: 4%;
-        border-radius: 5px;
-        border: solid 2px black;
-        text-align: center;
-        cursor: pointer;
-        transition: transform 0.3s ease; /* Added transition property */
-        font-family: poppins;
-        
-    }
-
+    flex-direction: column;
+    margin-top: 1%;
+    justify-content: center;
     button:hover{
         transform: scale(1.01); /* Increase the size on hover */
     }
 
+    img{
+        height: 35vh;
+        border-radius: 8px;
+        margin-right: 60%;
+    }
+
+
     @media (max-width: 768px) {
-        /* CSS code for screens with a maximum width of 768px */
-        /* Adjust the styles for smaller screens here */
-        /* For example, you can change the width of the images and buttons */
         width: 80%;
         margin-left: 10%;
         margin-top: 5%;
@@ -66,7 +48,6 @@ export const StyledDivContainer = styled.div`
             width: 50%;
         }
     }
-
     
 `
 
@@ -80,20 +61,57 @@ export const StyledNavBar = styled.div`
     h1{
         margin-left: 7%;
     }
+
+    a{
+        margin-left: 5%;
+    }
+`
+
+export const StyledDivInfosCard = styled.div`
+    margin-right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+`
+
+export const StyledImageFilm = styled.div`
+    margin-right: 8%;
+    
+    
+`
+
+export const StyledDivNota = styled.div`
+    margin-left: 2%;
+    margin: 5%;
+    padding: 5px;
+    gap: 5%;
+    
+`
+
+export const StyledTeste = styled.div`
+    margin-left: 2%;
+    margin: 5%;
+    padding: 5px;
+    gap: 5%;
+    
 `
 
 export const StyledBusca = styled.input`
 
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
-    height: 40px;
-    width: 83%;
+    height: 30px;
+    width: 800px;
     border-radius: 4px;
-    border: solid 2px black;
+    border: solid 2px;
+    opacity: 0.5;
     margin-top: 1%;
     font-family: poppins;
     font-weight: bold;
-
+    margin-right: 25%;
+    
     @media (max-width: 768px) {
         width: 65%;
         margin-top: 5%;
@@ -109,6 +127,26 @@ export const StyledButton = styled.button`
     width: 45px;
 
     margin-left: 1%;
+
+    @media (max-width: 768px) {
+        width: 10%;
+        height: 35px;
+    }
+
+`
+
+export const StyledButtonDetalhes = styled.button`
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+    width: 100%;
+    height: 20%;
+    border-radius: 8px;
+    font-family: poppins;
+    background-color: rgb(1 22 73);
+    color: white;
+    display: flex;
+    margin-top: 10%;
+
 
     @media (max-width: 768px) {
         width: 10%;
@@ -179,3 +217,14 @@ export const StyledButtonNext = styled.button`
 export const StyledRodape = styled.div`
     margin-top: 2%;
 `
+export const StyledDivButtonDetails = styled.div`
+    display: flex;
+    align-items: flex-end;
+    margin-left: auto;
+`;
+
+export const StyledContainerNav = styled.div`
+    display: flex;
+    align-items: flex-end;
+    margin:0 auto;
+`;
