@@ -2,8 +2,15 @@ import React from 'react';
 import { StyledDivCard, StyledDivContainer, StyledDivInfosCard, StyledDivNota, StyledTeste, StyledImageFilm } from '../style';
 import { IoIosStar } from "react-icons/io";
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const CardFilm = ({ filme }) => {
+
+  const formataData = (nota) => {
+    return nota.toFixed(1);
+  }
+  
+
   return (
     <StyledDivContainer>
       {filme.map((filme) => (
@@ -17,12 +24,13 @@ const CardFilm = ({ filme }) => {
                 <h3>{filme.title}</h3>
                 <p>{filme.overview}</p>
               </StyledTeste>
-              <StyledDivNota>
-                <strong>Average {filme.vote_average}<IoIosStar style={{
+              
+            </StyledDivInfosCard>
+            <StyledDivNota>
+                <strong>Average {formataData(filme.vote_average)}<IoIosStar style={{
                   color: '#ffbf00'
                 }} /></strong>
               </StyledDivNota>
-            </StyledDivInfosCard>
           </StyledDivCard>
         </Link>
       ))}

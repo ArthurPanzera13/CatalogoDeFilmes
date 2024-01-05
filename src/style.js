@@ -7,7 +7,7 @@ export const StyledDivCard = styled.div`
     padding: 2%;
     border-radius: 8px;
     display: flex;
-    height: 35vh;
+    height: 22vh;
     transition: background-color 0.8s ease; /* Transição mais lenta (0.5s) */
     gap: 5px;
     justify-content: flex-end;
@@ -29,7 +29,7 @@ export const StyledDivContainer = styled.div`
     }
 
     img{
-        height: 35vh;
+        height: 22vh;
         border-radius: 8px;
         margin-right: 60%;
     }
@@ -68,7 +68,7 @@ export const StyledNavBar = styled.div`
 `
 
 export const StyledDivInfosCard = styled.div`
-    margin-right: 2%;
+    margin-right: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,12 +77,14 @@ export const StyledDivInfosCard = styled.div`
 `
 
 export const StyledImageFilm = styled.div`
-    margin-right: 8%;
+    margin-right: auto;
     
     
 `
 
 export const StyledDivNota = styled.div`
+    display: flex;
+    flex-direction: row;
     margin-left: 2%;
     margin: 5%;
     padding: 5px;

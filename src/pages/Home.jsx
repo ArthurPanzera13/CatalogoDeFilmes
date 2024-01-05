@@ -51,7 +51,7 @@ const Home = () => {
         {loading ? <Loading /> : (
         <>
           <CardFilm filme={filmes} />
-          <StyledButtonNext onClick={proximaPagina}><strong>Próxima Página</strong></StyledButtonNext>
+          <StyledButtonNext onClick={proximaPagina}><strong>Next Page</strong></StyledButtonNext>
           <Rodape/>
         </>
         )}

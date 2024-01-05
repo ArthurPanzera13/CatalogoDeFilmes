@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const NavBar = () => {
   return (
     <StyledNavBar>
-      <Link to="/">
+      <Link to="/CatalogoDeFilmes">
         <h1>
           Movies 
         </h1>
