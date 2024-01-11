@@ -77,6 +77,10 @@ export const StyledNavBar = styled.div`
             width: 5%;
         }
 
+        a{
+            margin-left: 0%;
+        }
+
         gap: 75px;
         
     }
