@@ -48,6 +48,10 @@ export const StyledDivContainer = styled.div`
         width: 100%;
         gap: 25px;
         margin-top: 5%;
+
+        img{
+            height: 50vh;
+        }
     }
     
 `
@@ -72,7 +76,7 @@ export const StyledNavBar = styled.div`
             width: 5%;
         }
 
-        gap: 25px;
+        gap: 75px;
         
     }
 `

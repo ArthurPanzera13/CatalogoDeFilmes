@@ -5,7 +5,7 @@ import { StyledBusca, StyledContainerNav } from '../style';
 const SearchFilm = () => {
   return (
     <StyledContainerNav>
-        <StyledBusca type="text" name="" id="" placeholder="Search for the name of the Movie..." />
+        <StyledBusca type="text" name="" id="" placeholder="Search Movie..." />
     </StyledContainerNav>
   )
 }
