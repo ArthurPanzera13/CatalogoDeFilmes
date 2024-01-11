@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledDivDetails, StyledDivInfos} from '../style'
+import { StyledDivDetails, StyledDivInfos, StyledDivVideo} from '../style'
 
 import { BsFillCalendarDateFill } from 'react-icons/bs';
 import { BiTime, BiMoney } from 'react-icons/bi';
@@ -55,7 +55,9 @@ const FilmDetails = ({filme}) => {
   return (
     <StyledDivDetails>
         <h1>{filme.title}</h1>
-        <YouTube videoId={filmesVideo.length > 0 ? chaveTrailer : ''} />
+        <StyledDivVideo>
+          <YouTube videoId={filmesVideo.length > 0 ? chaveTrailer : ''} />
+        </StyledDivVideo> 
         <StyledDivInfos>
           <BsFillCalendarDateFill/><h3>Release Date: {formataData(filme.release_date)}</h3>
         </StyledDivInfos>

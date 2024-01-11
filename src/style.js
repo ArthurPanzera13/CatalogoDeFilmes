@@ -51,6 +51,7 @@ export const StyledDivContainer = styled.div`
 
         img{
             height: 50vh;
+            display: flex;
         }
     }
     
@@ -89,6 +90,17 @@ export const StyledDivInfosCard = styled.div`
     
     @media (max-width: 1120px) {
         display: none;
+        
+    }
+    
+`
+
+export const StyledDivVideo = styled.div`
+    
+    @media (max-width: 1120px) {
+        iframe{
+            width: 45vh;
+        }
         
     }
     
