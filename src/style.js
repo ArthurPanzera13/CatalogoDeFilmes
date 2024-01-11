@@ -15,6 +15,13 @@ export const StyledDivCard = styled.div`
     &:hover{
         background-color: #DCDCDC;
     }
+
+    @media (max-width: 1120px) {
+        width: auto;
+        height: auto;
+        background-color: rgb(1 22 73);
+        
+    }
 `
 
 export const StyledDivContainer = styled.div`
@@ -35,18 +42,12 @@ export const StyledDivContainer = styled.div`
     }
 
 
-    @media (max-width: 768px) {
-        width: 80%;
-        margin-left: 10%;
+    @media (max-width: 1120px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 25px;
         margin-top: 5%;
-
-        img{
-            height: 70%;
-        }
-
-        button{
-            width: 50%;
-        }
     }
     
 `
@@ -56,7 +57,7 @@ export const StyledNavBar = styled.div`
     align-items: center;
     display: flex;
     flex-direction: row;
-    height: 70px;
+    height: 10vh;
 
     h1{
         margin-left: 7%;
@@ -64,6 +65,15 @@ export const StyledNavBar = styled.div`
 
     a{
         margin-left: 5%;
+    }
+
+    @media (max-width: 1120px) {
+        h1{
+            width: 5%;
+        }
+
+        gap: 25px;
+        
     }
 `
 
@@ -73,11 +83,20 @@ export const StyledDivInfosCard = styled.div`
     justify-content: center;
     align-items: center;
     
+    @media (max-width: 1120px) {
+        display: none;
+        
+    }
     
 `
 
 export const StyledImageFilm = styled.div`
     margin-right: auto;
+
+    @media (max-width: 1120px) {
+        margin: auto;
+        
+    }
     
     
 `
@@ -89,6 +108,10 @@ export const StyledDivNota = styled.div`
     margin: 5%;
     padding: 5px;
     gap: 5%;
+
+    @media (max-width: 1120px) {
+        display: none;
+    }
     
 `
 
@@ -114,8 +137,8 @@ export const StyledBusca = styled.input`
     font-weight: bold;
     margin-right: 25%;
     
-    @media (max-width: 768px) {
-        width: 65%;
+    @media (max-width: 1120px) {
+        width: 20vh;
         margin-top: 5%;
     }
 `
@@ -130,7 +153,7 @@ export const StyledButton = styled.button`
 
     margin-left: 1%;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1120px) {
         width: 10%;
         height: 35px;
     }
@@ -150,7 +173,7 @@ export const StyledButtonDetalhes = styled.button`
     margin-top: 10%;
 
 
-    @media (max-width: 768px) {
+    @media (max-width: 1120px) {
         width: 10%;
         height: 35px;
     }
