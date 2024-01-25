@@ -39,9 +39,9 @@ const FilmDetails = ({filme}) => {
 
         console.log(filmesVideo)
 
-        const indiceTrailerOficial = filmesVideo.findIndex(filmesVideo => filmesVideo.name === 'Official Trailer');
+        const indiceTrailerOficial = filmesVideo.findIndex(filmesVideo => filmesVideo.name === 'Official Trailer' || filmesVideo.name === 'Teaser Trailer' || filmesVideo.name === 'Original Trailer');
 
-        const chaveDoTrailerOficial = indiceTrailerOficial !== -1 ? filmesVideo[indiceTrailerOficial].key : '';
+        const chaveDoTrailerOficial = indiceTrailerOficial !== -1 ? filmesVideo[indiceTrailerOficial].key : filmesVideo[0].key;
 
         setChaveTrailer(chaveDoTrailerOficial)
 

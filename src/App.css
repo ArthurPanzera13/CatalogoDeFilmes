@@ -20,3 +20,7 @@ a{
       flex-direction: column;
   }
 }
+
+p{
+  font-size: 14px;
+}

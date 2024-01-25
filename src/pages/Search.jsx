@@ -1,36 +1,38 @@
-import React from 'react'
-import NavBar from '../components/NavBar'
-
-//Axios
+import React, { useEffect, useState } from 'react';
+import NavBar from '../components/NavBar';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import CardFilm from '../components/CardFilm';
 
-const Search = ({props}) => {
+const Search = () => {
 
-  const location = useLocation();
-  const searchTerm = location.state && location.state.searchTerm;
+  const [filmes, setFilmes] = useState([]);
+  const { id } = useParams();
+
+  console.log(id);
 
   useEffect(() => {
-
-    console.log(searchTerm)
-
-    axios
-      .get(`https://api.themoviedb.org/3/search/movie?query=${searchTerm}&api_key=fc0d1e86d240df4a0d3424c1e33e3479`)
-      .then((res) => {
-        console.log(res)
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-
-  }, []);
+    if (id) {
+      axios
+        .get(`https://api.themoviedb.org/3/search/movie?query=${id}&api_key=fc0d1e86d240df4a0d3424c1e33e3479`)
+        .then((res) => {
+          const filmes = res.data.results;
+          console.log(filmes)
+          
+          setFilmes(filmes);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    }
+  }, [id]);
 
   return (
     <div>
-        <NavBar/>
+      <NavBar />
+      <CardFilm filme={filmes} />
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;
