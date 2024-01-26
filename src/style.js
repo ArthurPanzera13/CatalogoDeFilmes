@@ -16,11 +16,6 @@ export const StyledDivCard = styled.div`
         background-color: #DCDCDC;
     }
 
-    @media (max-width: 1400px) {
-        height: 32vh;
-        
-    }
-
     @media (max-width: 1120px) {
         width: auto;
         height: auto;
@@ -44,15 +39,6 @@ export const StyledDivContainer = styled.div`
         height: 22vh;
         border-radius: 8px;
         margin-right: 60%;
-    }
-
-    @media (max-width: 1400px) {
-        img{
-            height: 28vh;
-            border-radius: 8px;
-            margin-right: 60%;
-        }
-        
     }
 
 
