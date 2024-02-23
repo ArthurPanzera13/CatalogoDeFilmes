@@ -26,7 +26,7 @@ filme de sua escolha e descobrir várias informações, como:
 </ul>
 
 ## API
-<p>Para pegar as informações sobre criptomoedas usei a API <strong>TMDB</strong>.<br>
+<p>Para pegar as informações sobre os filmes usei a API <strong>TMDB</strong>.<br>
 Os end-points usados são:</p>
 <ul>
   <li><strong>GET/movie/popular</strong>: para retornar a lista de Filmes populares</li>
